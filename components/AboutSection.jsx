@@ -20,7 +20,7 @@ export default function AboutSection({ heading, detailsArr }) {
       if (details.points) {
         points = details.points.map(function (point, idx) {
           return (
-            <div className="flex">
+            <div key={idx} className="flex">
               <div>▪</div>
               <div className="ml-2">{point}</div>
             </div>
@@ -30,7 +30,7 @@ export default function AboutSection({ heading, detailsArr }) {
     }
 
     return (
-      <div className="text-sm sm:text-base md:text-lg mt-2">
+      <div key={idx} className="text-sm sm:text-base md:text-lg mt-2">
         {name}
         {title}
         <div className="mt-2 ml-2 sm:ml-4 md:ml-6">{points}</div>

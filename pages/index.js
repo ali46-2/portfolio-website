@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Head from "next/head";
 
 import Navbar from "@/components/Navbar";
-import Index from "@/components/Index";
+import Home from "@/components/Home";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 
-export default function Home() {
+export default function Index() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -24,10 +26,14 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Ali Murtaza</title>
+      </Head>
       <Navbar theme={theme} handleTheme={handleTheme} />
-      <Index />
+      <Home />
       <About />
       <Skills theme={theme} />
+      <Projects />
     </>
   );
 }

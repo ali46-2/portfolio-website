@@ -17,7 +17,7 @@ html {
   }
 
   .highlight {
-    @apply dark:text-amber-600 text-blue-600;
+    @apply dark:text-amber-600 text-blue-600 dark:border-amber-500 border-blue-500;
   }
 
   .highlight-transition {
@@ -28,6 +28,6 @@ html {
   .front,
   .back,
   .highlight-transition {
-    @apply ease-linear duration-300;
+    @apply ease-linear duration-200;
   }
 }

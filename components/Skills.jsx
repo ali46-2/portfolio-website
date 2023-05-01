@@ -9,7 +9,7 @@ export default function Skills({ theme }) {
       <div className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider highlight-transition p-4">
         My Skills
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pb-4 lg:pb-0">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 p-4 lg:pb-0">
         <Skill path="/skills/python.svg" name="Python" size={70} />
         <Skill path="/skills/pytorch.svg" name="PyTorch" size={70} />
         <Skill path="/skills/tensorflow.svg" name="TensorFlow" size={55} />
