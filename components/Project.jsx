@@ -4,7 +4,8 @@ import Link from "next/link";
 export default function Project({
   name,
   description,
-  image,
+  imagePath,
+  imageSize,
   url,
   textOrder,
   imageOrder,
@@ -37,7 +38,12 @@ export default function Project({
         <div className="flex justify-center border-[6px] highlight rounded-3xl overflow-hidden">
           <div className="hover:scale-110 hover:brightness-75 ease-out duration-300">
             <Link href={url} rel="noopener noreferrer" target="_blank">
-              <Image src={image} alt={name}></Image>
+              <Image
+                src={imagePath}
+                width={imageSize}
+                height={imageSize}
+                alt={name}
+              ></Image>
             </Link>
           </div>
         </div>
