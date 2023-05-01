@@ -1,5 +1,4 @@
 import Image from "next/image";
-// <Image src={path} alt={name} width={size} height={size} />
 
 export default function Skill({ path, name, size }) {
   return (
