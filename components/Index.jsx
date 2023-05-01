@@ -2,7 +2,7 @@ export default function Index() {
   return (
     <div
       id="home"
-      className="w-full h-screen flex flex-col justify-center items-center p-4"
+      className="w-full h-screen min-h-[600px] flex flex-col justify-center items-center p-4"
     >
       <div className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
         <p>

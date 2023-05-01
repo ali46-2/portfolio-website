@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 
 import {
   AiOutlineMenu,
@@ -13,18 +12,12 @@ import {
 
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
-export default function Navbar() {
-  const [mounted, setMounted] = useState(false);
+export default function Navbar({ theme, handleTheme }) {
   const [shadow, setShadow] = useState(false);
   const [menu, setMenu] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   function handleMenu() {
     setMenu(!menu);
-  }
-
-  function handleTheme() {
-    theme == "dark" ? setTheme("light") : setTheme("dark");
   }
 
   useEffect(() => {
@@ -37,13 +30,7 @@ export default function Navbar() {
     }
 
     window.addEventListener("scroll", handleShadow);
-
-    setMounted(true);
   }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <>
