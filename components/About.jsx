@@ -46,7 +46,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="max-w-[900px] h-screen min-h-[900px] flex flex-col justify-center mx-auto p-4"
+      className="max-w-[900px] w-full pt-24 lg:p-0 lg:h-screen lg:min-h-[900px] flex flex-col justify-center mx-auto p-4"
     >
       <AboutSection heading={"education"} detailsArr={education_details} />
       <AboutSection
